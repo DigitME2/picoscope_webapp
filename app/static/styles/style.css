@@ -1,0 +1,119 @@
+:root {
+    --main-bg-color: #AD1920;
+}
+
+
+.centralWrapper {
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+.bodyLeft {
+    width: 40%;
+    float: left;
+    padding: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.bodyRight {
+    margin-left: 15%;
+    height: 200px;
+}
+
+.formLine {
+    margin-top: 10px;
+    height: 30px;
+    vertical-align: bottom;
+    display: flex;
+}
+
+.formLine label {
+    margin-top: 5px;
+    flex-basis: 150px;
+    float: left;
+}
+
+.formLine input, select{
+    float: left;
+    display: inline;
+    vertical-align: bottom;
+    height: 30px;
+        flex-grow: 1;
+
+}
+
+.formLine input[type="submit"]{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.centralForm {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 500px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.centralForm input, textarea {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}
+
+.centralForm input[type="checkbox"] {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    vertical-align: middle;
+}
+
+
+.formInUseCheckboxContainer {
+    display: inline;
+}
+
+.centralForm input[type="submit"] {
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.centralForm input[type="submit"]:hover, .form button:active, .form button:focus {
+    background: var(--main-bg-color);
+    color: #f2f2f2;
+}
+
+
+.centralForm .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+
+.centralForm .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.formError {
+    color: red;
+    font-style: italic;
+}

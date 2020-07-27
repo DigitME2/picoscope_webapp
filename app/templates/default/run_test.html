@@ -1,0 +1,74 @@
+{% extends "default/base.html" %}
+
+{% block content %}
+    <link href="{{ url_for('static',filename='styles/style.css') }}" type="text/css" rel="stylesheet">
+
+    <div id="runTestBody" class="centralWrapper">
+
+        <div class="bodyLeft">
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                <div class="formLine">
+                    {{ form.test_duration.label }}
+                    {{ form.test_duration }}
+                    {{ form.test_duration_prefix }}
+                    {% for error in form.test_duration.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="formLine">
+                    {{ form.sampling_interval.label }}
+                    {{ form.sampling_interval }}
+                    {{ form.sampling_interval_prefix }}
+                    {% for error in form.sampling_interval.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="formLine">
+                    {{ form.channel.label }}
+                    {{ form.channel }}
+                </div>
+
+                <div class="formLine">
+                    {{ form.coupling.label }}
+                    {{ form.coupling }}
+                </div>
+
+                <div class="formLine">
+                    {{ form.v_range.label }}
+                    {{ form.v_range }}
+                    {% for error in form.v_range.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+                <div class="formLine">
+                    {{ form.v_offset.label }}
+                    {{ form.v_offset }}
+                    {% for error in form.v_offset.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </div>
+
+                <div class="formLine">
+                    {{ form.run }}
+                </div>
+            </form>
+        </div>
+        <br>
+
+        <div class="bodyRight">
+            <div class="graph" id="graph">
+                {{ graph|safe }}
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"
+            type="text/javascript"></script>
+
+{% endblock %}

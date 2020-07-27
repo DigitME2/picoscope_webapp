@@ -1,0 +1,48 @@
+<!doctype html>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link href="{{ url_for('static',filename='styles/basestyle.css') }}" type="text/css" rel="stylesheet">
+<html lang="en">
+<head>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Production</title>
+    {% endif %}
+
+</head>
+
+<body>
+<div id="navBar">
+    <div id="navBarLeft">
+        <a id="navBarTitle">{{ nav_bar_title }}</a>
+    </div>
+    <div id="navBarRight">
+        <ul class="navList">
+            {% if current_user.is_anonymous %}
+                <li><a href="{{ url_for('login.login') }}">Login</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login.logout') }}">Logout</a></li>
+            {% endif %}
+            {% if current_user.admin %}
+
+            {% endif %}
+
+
+        </ul>
+    </div>
+</div>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li class="flashedMessage">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+
+
+{% block content %}{% endblock %}
+</body>
+</html>

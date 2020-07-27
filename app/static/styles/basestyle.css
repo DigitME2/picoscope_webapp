@@ -1,0 +1,86 @@
+:root {
+    --main-bg-color: #AD1920;
+}
+
+div {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h4 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    padding-top: 65px
+}
+
+#navBar {
+    padding: 15px;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+
+#navBarLeft {
+    float: left;
+}
+
+#navBarTitle {
+    float: left;
+    display: inline;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navBarRight {
+    float: right;
+}
+
+ul.navList {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 20px;
+}
+
+ul.navList li {
+    float: right;
+}
+
+ul.navList a {
+    float: right;
+    display: inline;
+    border-right: 1px solid #bbb;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul.navList li a:hover {
+    background-color: #f3fbf6;
+    color: var(--main-bg-color);
+}
